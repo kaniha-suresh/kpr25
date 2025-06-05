@@ -1,0 +1,35 @@
+.header{
+    background-color:aqua;
+    color:black;
+    
+}
+.header:hover{
+    background-color: teal;
+    color:white;
+}
+#one{
+    color:brown;
+}
+#two{
+    color:brown;
+}
+#three{
+    color:brown;
+}
+#six{
+    color:grey;
+}
+*{
+    color:cadetblue;
+}
+.link{
+    text-decoration:none;
+    color:blueviolet;
+    background-color: beige;
+    padding: 15px;
+    border-radius: 10px;
+}
+.link.hover{
+    color:rgb(43, 99, 80);
+    background-color: rgb(212, 156, 136);
+}
