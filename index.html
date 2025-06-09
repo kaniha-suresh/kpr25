@@ -1,34 +1,68 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./css/style.css">
-<title>KPRCAS2K25</title>
-<style>
-    h2{
-        color: rgb(218, 7, 218);
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+ h1{ font-style: italic;
+    font-family: times new roman;
+    text-align: justify;
+    font-size: large;
+    font-weight: 999;
+    letter-spacing: 5px;
+ }
+ h2{
+    padding-top: 10px;
+    border:solid 10px,teal;
+    margin: 10px;
+ }
+ 
+    </style>
 </head>
 <body>
-    <h1 style="color: red;font size:20px;">hello KPR</h1>
-    <h2>hello world</h2>
-    <h3> ct</h3>
-    <h4>it</h4>
-    <h5>hello</h5>
-    <p class="header"><b>Lorem</b> <i>ipsum</i> <strong>dolor sit</strong><br> ametm <em><u> consectetur</u></em> adipisicing elit. Tenetur, temporibus? Facilis, non. Impedit itaque harum ipsa? Iusto nesciunt quas, nulla voluptatem sunt aliquid earum tenetur totam natus, similique iste. Dolores.</p>
-    <a class="link link-one" href="https://www.instagram.com/">INSTAGRAM</a> <br><br>
-    <a class="link"  href="home.html">home</a>
+    <form id="userForm">
+        <h1>User Form</h1>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
 
-    <ol>
-     <li id="one">it</li>
-    <li id="two">ct</li>
-    <li id="three">bca</li>
-</ol>
-<ul>
-    <li id="six">math</li>
-    <li id="six">science</li>
-    <li id="six">c++</li>
-    <li id="six">java</li>
+        <label for="batch">Batch:</label>
+        <input type="text" name="batch" id="batch" placeholder="Enter the batch" required><br>
+
+        <label for="dept">Department:</label>
+        <input type="text" name="dept" id="dept" placeholder="Enter the department" required><br>
+
+        <label for="registration_number">Registration Number:</label>
+        <input type="text" name="registration_number" id="registration_number" placeholder="Enter your registration number" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Submitted Details:</h2>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            let name = document.getElementById("name").value;
+            let batch = document.getElementById("batch").value;
+            let dept = document.getElementById("dept").value;
+            let regNum = document.getElementById("registration_number").value;
+
+            // Display submitted details
+            let outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Batch:</strong> ${batch}</p>
+                <p><strong>Department:</strong> ${dept}</p>
+                <p><strong>Registration Number:</strong> ${regNum}</p>
+            `;
+        });
+    </script>
 </body>
+</html>
 
+</body>
 </html>
